@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import HomeArt from "../components/HeroArt.jsx";
+import ProjectPlate from "../components/projectPlate.jsx";
 import projects from "../data/projects.js";
 import "./Projects.css";
 
@@ -51,28 +52,28 @@ function ProjectRow({ project }) {
   );
 }
 
-function ProjectPlate({ project }) {
-  return (
-    <div className="plate">
-      <div className="plate__art" aria-hidden="true">
-        <HomeArt seed={project.seed} viewBox={project.artCrop} />
-      </div>
+// function ProjectPlate({ project }) {
+//   return (
+//     <div className="plate">
+//       <div className="plate__art" aria-hidden="true">
+//         <HomeArt seed={project.seed} viewBox={project.artCrop} />
+//       </div>
 
-      <div className="plate__frame">
-        <div className="plate__bar">
-          <span className="plate__url mono">{project.url}</span>
-        </div>
-        <img
-          className="plate__shot"
-          src={project.image}
-          alt={`Screenshot of ${project.title}`}
-          width="1600"
-          height="1000"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  );
-}
+//       <div className="plate__frame">
+//         <div className="plate__bar">
+//           <span className="plate__url mono">{project.url}</span>
+//         </div>
+//         <img
+//           className="plate__shot"
+//           src={project.image}
+//           alt={`Screenshot of ${project.title}`}
+//           width="1600"
+//           height="1000"
+//           loading="lazy"
+//         />
+//       </div>
+//     </div>
+//   );
+// }
 
 export default Projects;

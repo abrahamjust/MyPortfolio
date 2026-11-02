@@ -42,7 +42,6 @@ function Contact() {
 
   return (
     <>
-        <Header />
         <div className="contact">
             {/* ---- Left: intro ---- */}
             <div className="contact__intro">

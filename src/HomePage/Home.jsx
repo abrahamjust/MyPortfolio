@@ -9,9 +9,6 @@ import ContactBand from './ContactBand.jsx';
 function Home() {
     return (
         <>
-            <Scroll />
-            <RevealOnScroll />
-            <Header />
             <Hero />
             <Projects />
             <About />
