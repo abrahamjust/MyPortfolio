@@ -1,4 +1,10 @@
+import HeroArt from "../components/HeroArt";
+import { useState } from "react";
+
 function Hero() {
+
+    const [seed, setSeed] = useState(1027);
+
     return (
         <>
             <div className="leftHero">
@@ -26,7 +32,13 @@ function Hero() {
                 </div>
             </div>
             <div className="rightHero">
-                <HeroArt />
+                <HeroArt seed={seed} flow />
+                <div className="hero-art__controls">
+                <span className="mono">seed {String(seed).padStart(4, "0")}</span>
+                <button type="button" onClick={() => setSeed(1 + Math.floor(Math.random() * 9999))}>
+                    Redraw
+                </button>
+                </div>
             </div>
         </>
     )

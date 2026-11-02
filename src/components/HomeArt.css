@@ -1,0 +1,30 @@
+.flow-art {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ 
+/* Pink prints over blue: multiply in light mode, screen in dark (from --blend) */
+.flow-art__overprint {
+    mix-blend-mode: var(--blend, multiply);
+}
+ 
+/* Pulses: short dashes sliding along every stream, about 40px per second */
+.flow-art__pulses {
+    fill: none;
+    stroke: var(--pen-b);
+    stroke-width: 3.2;
+    stroke-linecap: round;
+    stroke-dasharray: 2 28;
+    animation: flow-art-pulse 7.5s linear infinite;
+}
+ 
+@keyframes flow-art-pulse {
+    from { stroke-dashoffset: 0; }
+    to   { stroke-dashoffset: -300; } /* a multiple of 30 (2 + 28), so the loop is seamless */
+}
+ 
+/* No moving pulses for people who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+    .flow-art__pulses { display: none; }
+}
