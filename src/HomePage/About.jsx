@@ -8,8 +8,8 @@ const toolbox = [
 
 function About() {
   return (
-    <section className="about" id="about">
-      <div className="about__bio">
+    <section className="about" id="about" data-reveal-line>
+      <div className="about__bio" data-reveal>
         <h2>About</h2>
         <p className="lead">
           [Two or three sentences about you: what you like building, where you've
@@ -24,7 +24,7 @@ function About() {
         </a>
       </div>
 
-      <div className="about__toolbox">
+      <div className="about__toolbox" data-reveal>
         {toolbox.map((group) => (
           <div
             key={group.title}

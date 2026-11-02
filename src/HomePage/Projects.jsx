@@ -5,8 +5,8 @@ import "./Projects.css";
 
 function Projects() {
   return (
-    <section className="projects" id="work">
-      <div className="projects__intro">
+    <section className="projects" id="work" data-reveal-line>
+      <div className="projects__intro" data-reveal>
         <h2>Selected work</h2>
         <p className="muted">
           Four projects across web, backend and ML. Each one has a short case study.
@@ -22,7 +22,7 @@ function Projects() {
 
 function ProjectRow({ project }) {
   return (
-    <article className="project-row">
+    <article className="project-row" data-reveal>
       <ProjectPlate project={project} />
 
       <div className="project-row__text">

@@ -178,7 +178,6 @@
 html {
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
-	scroll-behavior: smooth;
 }
 
 body {
@@ -347,4 +346,82 @@ pre {
   background: transparent;
   color: var(--ink);
   border: var(--border);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Chrome 121+, Edge, Firefox */
+html {
+  scrollbar-color: var(--pen-a) var(--paper);   /* thumb, then track */
+  scrollbar-width: thin;
+}
+
+/* Safari (and older Chrome) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pen-a);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--paper);   /* gives the thumb a gap around it */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pen-b);
+}
+
+/* ---- Scroll reveal ---- */
+
+/* Content: fades and lifts in */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal-ready [data-reveal][data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Section line: drawn left to right like a pen stroke */
+.reveal-ready [data-reveal-line] {
+  position: relative;
+  border-top-color: transparent;          /* hide the real border */
+}
+
+.reveal-ready [data-reveal-line]::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;                            /* sits exactly where the border was */
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s var(--ease);
+}
+
+.reveal-ready [data-reveal-line][data-visible="true"]::before {
+  transform: scaleX(1);
+}
+
+/* Less motion requested: everything simply appears */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal],
+  .reveal-ready [data-reveal-line]::before {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
