@@ -1,0 +1,106 @@
+/* ---- Layout ---- */
+.hero {
+  display: grid;
+  gap: var(--gutter);
+  align-items: center;
+  padding: var(--space-7) var(--page-margin) var(--section-space);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 5fr 7fr;   /* text 5 columns, art 7 */
+    padding-top: var(--space-9);
+  }
+}
+
+/* ---- Left side ---- */
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  container-type: inline-size;       /* lets the name size itself to this column */
+}
+
+/* The name: blue layer with a pink copy printed slightly off */
+.hero__name {
+  position: relative;
+  color: var(--pen-a);
+  font-size: min(var(--fs-name), 20cqi);   /* never wider than the column */
+}
+
+.hero__name-ink > span,
+.hero__name-misprint > span {
+  display: block;                    /* "Abraham" and "Justin" on separate lines */
+}
+
+.hero__name-misprint {
+  position: absolute;
+  inset: 0;
+  transform: translate(var(--misprint), var(--misprint));
+  color: var(--pen-b);
+  mix-blend-mode: var(--blend);
+  pointer-events: none;
+}
+
+.hero__intro {
+  max-width: 480px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero__status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-small);
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pen-b);
+  flex: none;
+}
+
+/* ---- Right side: the art box ---- */
+.hero__art {
+  position: relative;                /* so the controls can sit in its corner */
+  height: var(--hero-art-h);
+  border: var(--border);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.hero__controls {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 3px 3px 3px var(--space-4);
+  background: var(--paper);
+  border: var(--border);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+}
+
+.hero__redraw {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 40px;
+  padding-inline: var(--space-4);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+  cursor: pointer;
+}

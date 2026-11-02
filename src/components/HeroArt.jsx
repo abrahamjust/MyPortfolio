@@ -1,4 +1,7 @@
+import { useMemo } from 'react';
+import { useId } from 'react';
 import buildFlowArt from './HomeArtGeometry.js';
+import './HomeArt.css';
 
 function HomeArt({ seed = 1027, viewBox = '0 0 900 760', flow = false, className = ''}) {
     const art = useMemo(() => buildFlowArt(seed, [seed]));

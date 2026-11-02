@@ -1,0 +1,106 @@
+/* The bar */
+.site-header {
+  position: relative;                 /* so the mobile menu can sit right below it */
+  z-index: 10;
+  height: var(--header-h);
+  padding-inline: var(--page-margin);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+  background: var(--paper);
+}
+
+/* "your name" on the left */
+.site-header__name {
+  font-size: 1.25rem;                 /* 20px */
+  font-weight: 900;
+  font-variation-settings: var(--voice-display);
+  text-decoration: none;
+}
+
+/* Everything on the right */
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Work, About, Contact */
+.site-header__nav a {
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 14px;                 /* makes the tap area about 44px tall */
+}
+
+.site-header__nav a:hover {
+  color: var(--pen-a);
+}
+
+/* The page you're on gets a pink underline */
+.site-header__nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--pen-b);
+  text-underline-offset: 6px;
+}
+
+/* The light/dark toggle */
+.theme-toggle {
+  width: var(--control-sm);
+  height: var(--control-sm);
+  border-radius: 50%;
+  border: var(--border);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* "Menu" button: phones only */
+.site-header__menu {
+  height: var(--control-sm);
+  padding-inline: var(--space-4);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- Phones: links become a drop-down --- */
+@media (max-width: 599px) {
+  .site-header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;                        /* directly under the header */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: var(--space-2) var(--page-margin) var(--space-5);
+    background: var(--paper);
+    border-bottom: var(--border);
+  }
+
+  .site-header__nav[data-open="true"] {
+    display: flex;
+  }
+
+  .site-header__nav a {
+    font-size: 1.75rem;               /* 28px, big and easy to tap */
+    font-weight: 800;
+    font-variation-settings: var(--voice-display);
+    padding: 10px 0;
+  }
+}
+
+/* --- Tablet and up: show links inline, hide Menu --- */
+@media (min-width: 600px) {
+  .site-header__nav {
+    display: flex;
+  }
+  .site-header__menu {
+    display: none;
+  }
+}
