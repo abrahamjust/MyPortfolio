@@ -4,6 +4,7 @@
   gap: var(--gutter);
   align-items: center;
   padding: var(--space-7) var(--page-margin) var(--section-space);
+  border-bottom: var(--border);
 }
 
 @media (min-width: 1024px) {

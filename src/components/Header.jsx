@@ -15,8 +15,8 @@ function Header() {
 
         <div className="site-header__right">
             <nav aria-label="Main" className="site-header__nav" data-open={menuOpen}>
-                <NavLink to="/" end onClick={close}>Work</NavLink>
-                <NavLink to="/#about" onClick={close}>About</NavLink>
+                <Link to="/#work" end onClick={close}>Work</Link>
+                <Link to="/#about" onClick={close}>About</Link>
                 <NavLink to="/contact" onClick={close}>Contact</NavLink>
             </nav>
 

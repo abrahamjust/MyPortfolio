@@ -1,0 +1,64 @@
+.about {
+  display: grid;
+  gap: var(--gutter);
+  padding: var(--section-space) var(--page-margin);
+  border-top: var(--border);
+}
+
+/* Laptop: bio and toolbox side by side */
+@media (min-width: 1024px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---- Left: bio ---- */
+.about__bio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 560px;
+}
+
+.about__resume {
+  align-self: flex-start;
+  font-weight: 700;
+}
+
+/* ---- Right: toolbox ---- */
+.about__toolbox {
+  display: grid;
+  gap: var(--gutter);
+  align-content: start;
+}
+
+/* Three columns from tablet up; stacked on phones */
+@media (min-width: 600px) {
+  .about__toolbox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about__group {
+  border-top: 3px solid var(--pen-a);
+  padding-top: var(--space-3);
+}
+
+/* ML gets the pink line, tying it to the neural net in the art */
+.about__group--accent {
+  border-top-color: var(--pen-b);
+}
+
+.about__group h3 {
+  font-size: 1.25rem;          /* smaller than project titles */
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+}
+
+.about__group ul {
+  list-style: none;            /* no bullet points */
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-small);
+  line-height: 1.8;
+}

@@ -1,0 +1,118 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-space);
+  padding: var(--section-space) var(--page-margin);
+  border-bottom: var(--border);
+}
+
+.projects__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* One project: plate on top, text below (phone and tablet) */
+.project-row {
+  display: grid;
+  gap: var(--gutter);
+  align-items: center;
+}
+
+.plate {
+  position: relative;
+  padding: var(--mat-pad);
+  border: var(--border);
+  border-radius: var(--radius-mat);
+  background: var(--mat);
+  overflow: hidden;
+}
+
+/* 1. Art fills the whole mat, faded */
+.plate__art {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+}
+
+/* 2. Frame sits on top of the art */
+.plate__frame {
+  position: relative;               /* lifts it above the absolutely positioned art */
+  background: var(--card);
+  border: var(--border);
+  border-radius: var(--radius-frame);
+  overflow: hidden;
+  box-shadow: var(--misprint) var(--misprint) 0 var(--pen-b);   /* hard pink offset, no blur */
+}
+
+.plate__bar {
+  height: var(--chrome-h);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--space-3);
+  border-bottom: var(--border);
+}
+
+.plate__url {
+  font-size: 0.75rem;
+  background: var(--mat);
+  border-radius: var(--radius-pill);
+  padding: 2px 12px;
+}
+
+/* 3. The screenshot */
+.plate__shot {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;             /* if it doesn't fit, crop from the bottom */
+}
+
+/* Laptop: side by side, sides alternate */
+@media (min-width: 1024px) {
+  .project-row {
+    grid-template-columns: 7fr 5fr;
+  }
+  .project-row:nth-of-type(even) {
+    grid-template-columns: 5fr 7fr;
+  }
+  .project-row:nth-of-type(even) .plate {
+    order: 2;                 /* move the plate to the right on every second row */
+  }
+}
+
+.project-row__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.project-row__kind {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--pen-a);
+}
+
+.project-row__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 18px;
+  margin: var(--space-2) 0 0;
+  font-size: var(--fs-small);
+}
+
+.project-row__meta dt { font-weight: 700; }
+.project-row__meta dd { margin: 0; }
+
+.project-row__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-2);
+}
+
+.project-row__links a:not(.btn) {
+  font-weight: 700;
+}

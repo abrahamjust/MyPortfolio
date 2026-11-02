@@ -1,0 +1,48 @@
+.contact-band {
+  margin: 0 var(--page-margin) var(--section-space);
+  padding: clamp(28px, 1rem + 4vw, 72px);    /* 28px on phones → 72px on laptops */
+  border-radius: var(--radius-panel);
+
+  background-color: var(--band-bg);
+  color: var(--band-fg);
+
+  /* Halftone dots, the same riso texture as the screenshots */
+  background-image: radial-gradient(circle, var(--band-dot) 1.6px, transparent 2.1px);
+  background-size: 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.contact-band h2 {
+  font-size: var(--fs-band);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  max-width: 860px;
+}
+
+.contact-band .lead {
+  max-width: 620px;
+}
+
+.contact-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+}
+
+/* Inverted button: light on the blue band */
+.contact-band__btn {
+  height: var(--control-lg);
+  background: var(--band-fg);
+  color: var(--band-bg);
+  font-weight: 800;
+}
+
+.contact-band__email {
+  color: var(--band-fg);
+  font-weight: 700;
+}
