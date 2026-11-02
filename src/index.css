@@ -425,3 +425,17 @@ html {
     transition: none;
   }
 }
+
+.misprint {
+  position: relative;
+  color: var(--pen-a);
+}
+
+.misprint__copy {
+  position: absolute;
+  inset: 0;
+  transform: translate(var(--misprint), var(--misprint));
+  color: var(--pen-b);
+  mix-blend-mode: var(--blend);
+  pointer-events: none;
+}

@@ -1,0 +1,221 @@
+.contact {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+  padding: var(--space-8) var(--page-margin) var(--section-space);
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    grid-template-columns: 5fr 7fr;
+    gap: 80px;
+    padding-top: 88px;
+  }
+}
+
+/* ---- Intro ---- */
+.contact__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.contact__title {
+  font-size: var(--fs-title);
+  line-height: 0.9;
+}
+
+.contact__intro p {
+  max-width: 460px;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0;
+}
+
+.contact__details > div {
+  border-top: var(--border);
+  padding-top: 10px;
+}
+
+.contact__details dt {
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.contact__details dd {
+  margin: 2px 0 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;          /* long emails wrap instead of overflowing */
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-5);
+}
+
+.contact__art {
+  height: clamp(120px, 15vw, 200px);
+  border: var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--mat);
+}
+
+/* ---- Panel ---- */
+.contact__panel {
+  background: var(--card);
+  border: var(--border);
+  border-radius: var(--radius-panel);
+  padding: var(--form-pad);
+  box-shadow: var(--misprint) var(--misprint) 0 var(--pen-b);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact__pair {
+  display: grid;
+  gap: 22px var(--space-5);
+}
+
+@media (min-width: 600px) {
+  .contact__pair {
+    grid-template-columns: 1fr 1fr;   /* name and email side by side */
+  }
+}
+
+/* ---- Fields ---- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border: none;                     /* for the fieldset */
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.field label,
+.field legend {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  padding: 0;
+}
+
+.field legend {
+  margin-bottom: 10px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  height: var(--control-lg);
+  padding: 0 var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: var(--paper);
+}
+
+.field textarea {
+  height: auto;
+  min-height: 168px;
+  padding-block: 14px;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.field textarea::placeholder {
+  color: var(--muted);
+}
+
+/* ---- Topic chips (real radio buttons, styled) ---- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  position: relative;
+}
+
+.chip input {
+  position: absolute;               /* invisible, but still focusable and clickable */
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  height: var(--control-sm);
+  padding: 0 18px;
+  border: var(--border);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.chip input:checked + span {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.chip input:focus-visible + span {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ---- Submit, error, sent ---- */
+.btn--lg {
+  height: var(--control-lg);
+  padding-inline: 28px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.contact__submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+  font-size: var(--fs-small);
+}
+
+.contact__error {
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--pen-b);
+  border-radius: var(--radius-control);
+  font-size: var(--fs-small);
+}
+
+.contact__sent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+}
+
+.contact__sent h2 {
+  font-size: 2.5rem;
+  color: var(--pen-a);
+}
