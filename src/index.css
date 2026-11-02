@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap");
+
+:root {
+  --font: "Recursive", sans-serif;
+  --fs-h2: clamp(2.25rem, 1.6rem + 2.67vw, 4rem);
+  --pen-a: #2D43D6;
+}
+
+body { 
+    font-family: var(--font); 
+}
