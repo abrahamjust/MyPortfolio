@@ -6,6 +6,7 @@ import Layout from "./components/Layout.jsx";
 import Home from "./HomePage/Home.jsx";
 import Contact from "./ContactPage/contactPage.jsx";
 import Project from "./ProjectPage/ProjectPage.jsx";
+import NotFound from "./components/notFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/projects/:slug", element: <Project /> },
       { path: "/contact", element: <Contact /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);
