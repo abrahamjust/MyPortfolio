@@ -12,8 +12,8 @@ function ContactBand() {
         <Link to="/contact" className="btn contact-band__btn">
           Start a conversation
         </Link>
-        <a href="mailto:you@yourdomain.com" className="contact-band__email mono">
-          you@yourdomain.com
+        <a href="mailto:abrahamjustin@gmail.com" className="contact-band__email mono" target="_blank">
+          abrahamjustin@gmail.com
         </a>
       </div>
     </section>

@@ -3,7 +3,7 @@ import Header from "./Header.jsx";
 import ScrollToHash from "./Scroll.jsx";
 import RevealOnScroll from "./RevealOnScroll.jsx";
 
-export default function Layout() {
+function Layout() {
   return (
     <>
       <ScrollToHash />
@@ -15,3 +15,5 @@ export default function Layout() {
     </>
   );
 }
+
+export default Layout;

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import HomeArt from "../components/HeroArt.jsx";
 import MisprintHeading from "../components/MisprintHeading.jsx";
-import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 import "./styles/contactPage.css";
 
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-const EMAIL = "you@yourdomain.com";
+const FORM_ENDPOINT = "https://formspree.io/f/xljjoqjp";
+const EMAIL = "abrahamjust@gmail.com";
 
 const topics = [
-  { id: "role",     label: "Full-time role", org: "Company and role title",        hint: "The team, the role, and what you're building." },
+  { id: "role",     label: "Full-time role / internship", org: "Company and role title",        hint: "The team, the role, and what you're building." },
   { id: "contract", label: "Contract work",  org: "Company or project",            hint: "Scope, rough timeline and budget range." },
   { id: "collab",   label: "Collaboration",  org: "Project link (optional)",       hint: "What the project is and where you could use help." },
   { id: "other",    label: "Something else", org: "Company or project (optional)", hint: "What's on your mind?" },
@@ -45,14 +45,14 @@ function Contact() {
         <div className="contact">
             {/* ---- Left: intro ---- */}
             <div className="contact__intro">
-                <MisprintHeading className="contact__title">Let’s talk</MisprintHeading>
+                <MisprintHeading className="contact__title">Let's talk</MisprintHeading>
 
                 <p className="lead">
                 Hiring for a full-stack or ML-adjacent role, or have a project to build
                 together? Tell me a little about it.
                 </p>
                 <p className="muted">
-                I reply within [two working days]. Based in [city], working in [time zone].
+                I reply within two working days. Based in Chennai, working in IST (Indian Standard Time).
                 </p>
 
                 <dl className="contact__details">
@@ -63,8 +63,8 @@ function Contact() {
                 <div>
                     <dt>Elsewhere</dt>
                     <dd className="contact__links">
-                    <a href="https://github.com/you">GitHub</a>
-                    <a href="https://linkedin.com/in/you">LinkedIn</a>
+                    <a href="https://github.com/abrahamjust" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/abraham-justin-b28184284" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="/resume.pdf" download>Résumé (PDF)</a>
                     </dd>
                 </div>
@@ -80,7 +80,7 @@ function Contact() {
                 {status === "sent" ? (
                 <div className="contact__sent" role="status">
                     <h2>Message sent</h2>
-                    <p>Thanks. I’ll reply to the email you gave within [two working days].</p>
+                    <p>Thanks. I’ll reply to the email you gave within two working days.</p>
                     <button type="button" className="btn btn--outline" onClick={() => setStatus("idle")}>
                     Write another message
                     </button>
@@ -146,6 +146,7 @@ function Contact() {
                 )}
             </div>
         </div>
+        <Footer />
     </>
   );
 }
