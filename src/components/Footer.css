@@ -2,6 +2,7 @@
     height: var(--header-h);
     padding-inline: var(--page-margin);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background: var(--paper);
@@ -12,6 +13,12 @@
     display: flex;
     align-items: center;
     gap: var(--space-2);
+}
+
+.site-footer_nav {               
+    display: flex;
+    flex-wrap: wrap;               
+    gap: var(--space-1) var(--space-5);
 }
 
 .site-footer_nav a {
