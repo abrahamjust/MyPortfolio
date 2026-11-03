@@ -9,7 +9,7 @@ function Projects() {
       <div className="projects__intro" data-reveal>
         <h2>Selected work</h2>
         <p className="muted">
-          Four projects across web, backend and ML. Each one has a short case study.
+          Four projects across full-stack web, search and machine learning. Each one has a short case study.
         </p>
       </div>
 

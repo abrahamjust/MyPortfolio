@@ -38,7 +38,7 @@ function Hero() {
 
             <p className="hero__status muted">
                 <span className="hero__dot" aria-hidden="true"></span>
-                Open to full-time roles and collaborations
+                Open to internships, full-time roles and collaborations
             </p>
       </div>
 

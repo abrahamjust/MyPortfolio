@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HomeArt from "../components/HeroArt.jsx";
 import MisprintHeading from "../components/MisprintHeading.jsx";
-import Footer from "../components/Footer.jsx";
 import "./styles/contactPage.css";
 
 const FORM_ENDPOINT = "https://formspree.io/f/xljjoqjp";
@@ -15,6 +14,11 @@ const topics = [
 ];
 
 function Contact() {
+
+    useEffect(() => { 
+            document.title = "Abraham Justin | Full-stack engineer"; 
+        }, []);
+
   const [topicId, setTopicId] = useState("role");
   const [status, setStatus] = useState("idle");   // idle | sending | sent | error
   const topic = topics.find((t) => t.id === topicId);
@@ -146,7 +150,6 @@ function Contact() {
                 )}
             </div>
         </div>
-        <Footer />
     </>
   );
 }

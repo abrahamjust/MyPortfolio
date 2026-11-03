@@ -3,8 +3,7 @@ import { Link, useParams } from "react-router";
 import projects from "../data/projects.js";
 import ProjectPlate from "../components/projectPlate.jsx";   
 import MisprintHeading from "../components/MisprintHeading.jsx";
-import HomeArt from "../components/HeroArt.jsx";             
-import Footer from "../components/Footer.jsx";
+import HomeArt from "../components/HeroArt.jsx"; 
 import "./styles/ProjectPage.css";
 
 function Project() {
@@ -114,7 +113,6 @@ function Project() {
           </div>
         </Link>
       </article>
-      <Footer />
     </>
   );
 }

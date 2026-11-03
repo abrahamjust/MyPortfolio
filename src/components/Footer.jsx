@@ -12,7 +12,7 @@ function Footer() {
                         GitHub
                     </a>
                     <a href="https://www.linkedin.com/in/abraham-justin-b28184284" target="_blank" rel="noopener noreferrer">
-                        Linkedin
+                        LinkedIn
                     </a>
                     <a href="mailto:abrahamjust@gmail.com">
                         Email
