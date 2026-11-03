@@ -16,7 +16,7 @@ const topics = [
 function Contact() {
 
     useEffect(() => { 
-            document.title = "Abraham Justin | Full-stack engineer"; 
+            document.title = "Contact | Abraham Justin"; 
         }, []);
 
   const [topicId, setTopicId] = useState("role");
