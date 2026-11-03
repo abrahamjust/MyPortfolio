@@ -1,9 +1,29 @@
 import "./About.css";
 
 const toolbox = [
-  { title: "Frontend", items: ["React, TypeScript", "Vite", "HTML, CSS, JavaScript"] },
-  { title: "Backend",  items: ["Node.js, Express", "Python, FastAPI", "MongoDB, Redis, BullMQ"] },
-  { title: "ML",       items: ["PyTorch, scikit-learn", "XGBoost, SHAP", "BM25, Doc2Vec", "Gemini, Ollama, MCP"], accent: true },
+  {
+    title: "Languages",
+    items: ["Python, Java", "JavaScript, TypeScript", "C/C++, SQL", "HTML, CSS"],
+  },
+  {
+    title: "Web",
+    items: ["React, Vite", "Node.js, Express, FastAPI", "Prisma, Passport.js", "Git, GitHub"],
+  },
+  {
+    title: "Data",
+    items: ["PostgreSQL, MongoDB", "Redis, BullMQ, SQLite", "Apache Kafka, Spark", "pandas, NumPy, Matplotlib"],
+  },
+  {
+    title: "ML & AI",
+    items: [
+      "PyTorch, PyTorch Geometric",
+      "TensorFlow, Keras",
+      "scikit-learn, XGBoost, SHAP",
+      "RAG, FAISS, BM25",
+      "Gemini, Ollama, LangGraph, MCP",
+    ],
+    accent: true,
+  },
 ];
 
 function About() {

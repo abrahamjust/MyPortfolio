@@ -35,7 +35,7 @@
 /* Three columns from tablet up; stacked on phones */
 @media (min-width: 600px) {
   .about__toolbox {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
