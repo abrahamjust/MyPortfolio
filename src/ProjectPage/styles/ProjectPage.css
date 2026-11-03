@@ -189,11 +189,21 @@
   gap: 10px;
 }
 
-.case__gallery img {
+/* .case__gallery img {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border: var(--border);
+  border-radius: 14px;
+} */
+
+.case__gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;          /* was: cover */
+  background: var(--card);      /* new: fills the space around the image */
   border: var(--border);
   border-radius: 14px;
 }

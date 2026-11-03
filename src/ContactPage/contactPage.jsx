@@ -65,7 +65,7 @@ function Contact() {
                     <dd className="contact__links">
                     <a href="https://github.com/abrahamjust" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/in/abraham-justin-b28184284" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="/resume.pdf" download>Résumé (PDF)</a>
+                    <a href="/Abraham_Justin_Resume.pdf" download>Résumé (PDF)</a>
                     </dd>
                 </div>
                 </dl>

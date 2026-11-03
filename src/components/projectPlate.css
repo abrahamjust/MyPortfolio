@@ -40,12 +40,18 @@
 }
 
 /* 3. The screenshot */
-.plate__shot {
+/* .plate__shot {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: top;             /* if it doesn't fit, crop from the bottom */
+  object-position: top;   }          /* if it doesn't fit, crop from the bottom */
+
+
+.plate__shot {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;     /* use the image's real shape instead of forcing 16:10 */
 }
 
 .plate--large {

@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import HomeArt from "../components/HeroArt.jsx";
 import ProjectPlate from "../components/projectPlate.jsx";
 import projects from "../data/projects.js";
 import "./Projects.css";
@@ -44,8 +43,8 @@ function ProjectRow({ project }) {
           <Link to={`/projects/${project.slug}`} className="btn btn--primary">
             Read the case study
           </Link>
-          <a href={project.liveUrl}>Live site</a>
-          <a href={project.codeUrl}>Code</a>
+          {project.liveUrl && <a href={project.liveUrl}>Live site</a>}
+          {project.codeUrl && <a href={project.codeUrl}>Code</a>}
         </div>
       </div>
     </article>

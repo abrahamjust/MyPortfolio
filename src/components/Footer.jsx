@@ -14,7 +14,7 @@ function Footer() {
                     <a href="https://www.linkedin.com/in/abraham-justin-b28184284" target="_blank" rel="noopener noreferrer">
                         Linkedin
                     </a>
-                    <a href="mailto:abrahamjustin@gmail.com">
+                    <a href="mailto:abrahamjust@gmail.com">
                         Email
                     </a>
                     <a href="https://www.instagram.com/abrahamjust05" target="_blank" rel="noopener noreferrer">

@@ -1,9 +1,9 @@
 import "./About.css";
 
 const toolbox = [
-  { title: "Frontend", items: ["TypeScript", "React, Next.js", "CSS, design systems"] },
-  { title: "Backend",  items: ["Node, Go", "Postgres, Redis", "Docker, AWS"] },
-  { title: "ML",       items: ["Python, PyTorch", "scikit-learn", "LLM APIs, RAG"], accent: true },
+  { title: "Frontend", items: ["React, TypeScript", "Vite", "HTML, CSS, JavaScript"] },
+  { title: "Backend",  items: ["Node.js, Express", "Python, FastAPI", "MongoDB, Redis, BullMQ"] },
+  { title: "ML",       items: ["PyTorch, scikit-learn", "XGBoost, SHAP", "BM25, Doc2Vec", "Gemini, Ollama, MCP"], accent: true },
 ];
 
 function About() {
@@ -12,19 +12,25 @@ function About() {
       <div className="about__bio" data-reveal>
         <h2>About</h2>
         <p className="lead">
-          [Two or three sentences about you: what you like building, where you've
-          worked, and what you want to do next.]
+          I love building full-stack web apps and connecting them to machine learning
+          models and retrieval (RAG).
         </p>
         <p className="muted">
-          [A shorter paragraph for the human side: where you're based, what you do
-          away from the keyboard.]
+          I’m studying for an integrated MTech in Computer Science and Engineering,
+          specialising in Business Analytics, at VIT Chennai, and I graduate in 2028.
         </p>
-        <a href="/resume.pdf" className="about__resume" download>
+        <p className="muted">
+          One word for me would be “philomath”: I enjoy learning and exploring ideas,
+          technical or not. Away from the keyboard I’m a cinephile, I read, I binge the
+          occasional web series, and I watch a lot of football. Glory glory Man United!
+          Start a conversation with me about almost anything.
+        </p>
+        <a href="/Abraham_Justin_Resume.pdf" className="about__resume" download>
           Download résumé (PDF)
         </a>
       </div>
 
-      <div className="about__toolbox" data-reveal>
+      <div className="about__toolbox" data-reveal style={{ "--delay": "120ms" }}>
         {toolbox.map((group) => (
           <div
             key={group.title}
